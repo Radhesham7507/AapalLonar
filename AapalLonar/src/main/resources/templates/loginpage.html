@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="css/loginStyle.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            width: 100%;
+            height: 110vh;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.15)),
+                url("image/lonar.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+		
+		.navbar {
+		            width: 100%;
+		            height: 15vh;
+		            background: rgba(0, 0, 0, 0.2);
+		            color: white;
+		            display: flex;
+		            justify-content: space-between;
+		            align-items: center;
+		            text-transform: uppercase;
+		            position: absolute;
+		            top: 0;
+		            left: 0;
+		        }
+		        .navbar .logo {
+		            width: 25%;
+		            text-align: center;
+		        }
+		        .navbar .menu {
+		            width: 40%;
+		            display: flex;
+		            justify-content: space-around;
+		        }
+		        .navbar .menu a {
+		            width: 25%;
+		            text-decoration: none;
+		            color: white;
+		            font-weight: bold;
+		        }
+		        .navbar .menu a:hover {
+		            color: #00b894;
+		        }
+        .login-container {
+            background: #fff;
+            padding: 20px 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+        }
+
+        .login-container h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #666;
+        }
+
+        button {
+            background: #28a745;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #555;
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .footer a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .logo {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+	
+	<nav class="navbar">
+	       <div class="logo">
+	           <h1 style="font-size: 20px;">Aapl Lonar ❤</h1>
+	       </div>
+	       <div class="menu">
+	           <a href="/" style="font-size: ">Home</a>
+	           <a href="/gallery">Gallery</a>
+	           <a href="https://www.instagram.com/aapl_lonar_mh28/" target="_blank">About</a>
+	           <a href="/contactMe">Contact</a>
+	       </div>
+	   </nav>
+	
+	
+	
+    <div class="login-container">
+        <img src="image/lonarlake.png" alt="Logo" class="logo">
+        <h2>Login</h2>
+		
+        <form action="/loginpage" method="post">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="oldusername" placeholder="Enter your username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="oldpassword" placeholder="Enter your password" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+        <div class="footer">
+            <p>Don't have an account? <a href="/signup">Sign up</a></p>
+        </div>
+    </div>
+</body>
+</html>

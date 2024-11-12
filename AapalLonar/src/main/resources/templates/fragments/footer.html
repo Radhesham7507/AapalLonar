@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer Example</title>
+    <style>
+        /* Footer Styles */
+        footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 20px 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+        }
+
+        .contact-info {
+            flex: 1;
+            margin: 10px 0;
+        }
+
+        .phone span {
+            font-weight: bold;
+        }
+
+        .socials {
+            flex: 1;
+            margin: 10px 0;
+        }
+
+        .socials a {
+            margin: 0 10px;
+            color: #ecf0f1;
+            text-decoration: none;
+            font-size: 24px;
+            transition: color 0.3s ease;
+        }
+
+        .socials a:hover {
+            color: #3498db;
+        }
+
+        .copy {
+            flex: 2;
+            margin: 10px 0;
+        }
+
+        .brand {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .brand .color1 {
+            color: #e74c3c;
+        }
+
+        .copy a {
+            color: #ecf0f1;
+            text-decoration: none;
+        }
+
+        .copy a:hover {
+            text-decoration: underline;
+        }
+
+        .designer {
+            margin-top: 10px;
+        }
+
+        .designer a {
+            color: #ecf0f1;
+            text-decoration: none;
+        }
+
+        .designer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .contact-info, .socials, .copy {
+                flex: 1 100%;
+            }
+        }
+    </style>
+    <!-- Font Awesome CDN for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="contact-info">
+                    <div class="phone"><span>Call Us:</span> +91 7350678301</div>
+                </div>
+                <div class="socials">
+                    <a href="https://www.instagram.com/radhesham_rd?igsh=ZHZ0NGV4M3g2cXZy" class="fa fa-instagram"></a>
+                    <a href="https://github.com/Radhesham7507" class="fa fa-github"></a>
+                    <a href="https://www.linkedin.com/in/radhesham-dhadve-169727233/" class="fa fa-linkedin"></a>
+                </div>
+                <div class="copy">
+                    <div class="brand">Lonar<span class="color1">Lake</span> </div>
+                    &copy; 2024 | <a href="https://www.uber.com/legal/en/document/?name=privacy-notice&country=india&lang=en">Privacy Policy</a>
+                    <div class="designer">
+                        Website designed by <a href="https://www.linkedin.com/in/radhesham-dhadve-169727233/" rel="nofollow">Radhesham Dhadve</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

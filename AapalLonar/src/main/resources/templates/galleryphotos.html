@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .navbar {
+            width: 100%;
+            height: 15vh;
+            background: rgba(0, 0, 0, 0.2);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-transform: uppercase;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .navbar .logo {
+            width: 25%;
+            text-align: center;
+        }
+        .navbar .menu {
+            width: 40%;
+            display: flex;
+            justify-content: space-around;
+        }
+        .navbar .menu a {
+            width: 25%;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+        .navbar .menu a:hover {
+            color: #00b894;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            padding: 20px;
+            width: 80%;
+            max-width: 1200px;
+            margin: 130px auto 20px auto; /* Adjusted margin-top for fixed navbar */
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+            cursor: pointer;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        /* Lightbox styles */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            padding-top: 50px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+        .lightbox-content {
+            position: relative;
+            margin: auto;
+            width: 80%;
+            max-width: 700px;
+        }
+        .lightbox-content img {
+            width: 100%;
+            height: auto;
+        }
+        .close, .prev, .next {
+            color: white;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2em;
+            cursor: pointer;
+            user-select: none;
+        }
+        .close {
+            top: 10px;
+            right: 25px;
+            font-size: 35px;
+            transform: none;
+        }
+        .prev {
+            left: 0;
+            padding: 10px;
+        }
+        .next {
+            right: 0;
+            padding: 10px;
+        }
+        .close:hover, .prev:hover, .next:hover {
+            color: #bbb;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <h1 style="font-size: 20px;">Aapl Lonar ❤</h1>
+        </div>
+        <div class="menu">
+            <a href="/">Home</a>
+            <a href="/gallery">Visit Lonar</a>
+            <a href="/galleryphotos">Gallery</a>
+            <a href="https://www.instagram.com/aapl_lonar_mh28/" target="_blank">About</a>
+            <a href="/contactMe">Contact</a>
+        </div>
+    </nav> 
+	
+	<div class="gallery" th:each="galleryphoto :${galleryphotos}" >
+		
+		<img th:src="@{/image/{image}(image=${galleryphoto.image})}" alt="Galley Image">
+		
+	</div>
+	
+	
+    <!-- Main Content -->
+    <div class="gallery">
+        <img src="image/lonar.png" alt="Photo 1">
+        <img src="image/sun.png" alt="Photo 2">
+        <img src="image/temple.jpeg" alt="Photo 3">
+        <img src="image/dhar2.jpeg" alt="Photo 5">
+        <img src="image/friendslonar2.jpg" alt="Photo 9">
+        <img src="image/friendslonar2.jpg" alt="Photo 9">
+        <img src="image/friendslonar.jpg" alt="Photo 8">
+        <img src="image/lakeviewlonar.jpg" alt="Photo 10">
+        <img src="image/flowerlonar2.jpg" alt="Photo 7">
+        <img src="image/photo1.jpeg" alt="Photo 1">
+        <img src="image/photo3.jpeg" alt="Photo 1">
+        <img src="image/photo4.jpeg" alt="Photo 1">
+        <img src="image/photo5.jpeg" alt="Photo 1">
+        <img src="image/photo6.jpeg" alt="Photo 1">
+        <img src="image/photo9.jpeg" alt="Photo 1">
+        <img src="image/photo11.jpeg" alt="Photo 1">
+        <img src="image/photo13.jpeg" alt="Photo 1">
+        <img src="image/photo14.jpeg" alt="Photo 1">
+        <img src="image/photo16.jpeg" alt="Photo 1">
+        <img src="image/photo17.jpeg" alt="Photo 1">
+        <img src="image/photo18.jpeg" alt="Photo 1">
+        <img src="image/photo19.jpeg" alt="Photo 1">
+        <img src="image/photo20.jpeg" alt="Photo 1">
+        <img src="image/photo21.jpeg" alt="Photo 1">
+        <img src="image/photo22.jpeg" alt="Photo 1">
+        <img src="image/photo23.jpeg" alt="Photo 1">
+        <img src="image/photo24.jpeg" alt="Photo 1">
+        <img src="image/photo25.jpeg" alt="Photo 1">
+        <img src="image/photo26.jpeg" alt="Photo 1">
+        <img src="image/photo30.jpeg" alt="Photo 1">
+        <img src="image/photo31.jpeg" alt="Photo 1">
+        <img src="image/photo33.jpeg" alt="Photo 1">
+        <img src="image/photo34.jpeg" alt="Photo 1">
+        <img src="image/photo36.jpeg" alt="Photo 1">
+        <img src="image/photo39.jpeg" alt="Photo 1">
+        <img src="image/photo42.jpeg" alt="Photo 1">
+        <img src="image/photo43.jpeg" alt="Photo 1">
+        <img src="image/photo44.jpeg" alt="Photo 1">
+        <img src="image/photo45.jpeg" alt="Photo 1">
+        <img src="image/photo2.jpeg" alt="Photo 1">
+        <img src="image/photo7.jpeg" alt="Photo 1">
+        <img src="image/photo8.jpeg" alt="Photo 1">
+        <img src="image/photo10.jpeg" alt="Photo 1">
+        <img src="image/photo12.jpeg" alt="Photo 1">
+        <img src="image/photo15.jpeg" alt="Photo 1">
+        <img src="image/photo27.jpeg" alt="Photo 1">
+        <img src="image/photo28.jpeg" alt="Photo 1">
+        <img src="image/photo29.jpeg" alt="Photo 1">
+        <img src="image/photo32.jpeg" alt="Photo 1">
+        <img src="image/photo35.jpeg" alt="Photo 1">
+        <img src="image/photo37.jpeg" alt="Photo 1">
+        <img src="image/photo38.jpeg" alt="Photo 1">
+        <img src="image/photo40.jpeg" alt="Photo 1">
+        <img src="image/photo45.jpeg" alt="Photo 1">
+    </div>
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <span class="prev" onclick="changeImage(-1)">&#10094;</span>
+        <span class="next" onclick="changeImage(1)">&#10095;</span>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="">
+        </div>
+    </div>
+
+    <script>
+        let currentImageIndex;
+        const images = document.querySelectorAll('.gallery img');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+
+        images.forEach((img, index) => {
+            img.addEventListener('click', () => {
+                openLightbox(index);
+            });
+        });
+
+        function openLightbox(index) {
+            currentImageIndex = index;
+            lightbox.style.display = 'block';
+            lightboxImg.src = images[currentImageIndex].src;
+        }
+
+        function closeLightbox() {
+            lightbox.style.display = 'none';
+        }
+
+        function changeImage(direction) {
+            currentImageIndex += direction;
+            if (currentImageIndex < 0) {
+                currentImageIndex = images.length - 1;
+            } else if (currentImageIndex >= images.length) {
+                currentImageIndex = 0;
+            }
+            lightboxImg.src = images[currentImageIndex].src;
+        }
+
+        // Close the lightbox when clicking outside the image
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+    </script>
+</body>
+</html>

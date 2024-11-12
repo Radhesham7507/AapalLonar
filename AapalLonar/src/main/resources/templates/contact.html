@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <style>
+        body {
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.15)),
+                url("image/lonar.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+		.navbar {
+		            width: 100%;
+		            height: 15vh;
+		            background: rgba(0, 0, 0, 0.2);
+		            color: white;
+		            display: flex;
+		            justify-content: space-between;
+		            align-items: center;
+		            text-transform: uppercase;
+		            position: absolute;
+		            top: 0;
+		            left: 0;
+		        }
+		        .navbar .logo {
+		            width: 25%;
+		            text-align: center;
+		        }
+		        .navbar .menu {
+		            width: 40%;
+		            display: flex;
+		            justify-content: space-around;
+		        }
+		        .navbar .menu a {
+		            width: 25%;
+		            text-decoration: none;
+		            color: white;
+		            font-weight: bold;
+		        }
+		        .navbar .menu a:hover {
+		            color: #00b894;
+		        }
+				
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+			margin-top: 200px;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+
+        .form-section, .contact-info {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            padding: 24px;
+        }
+
+        .form-section {
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .contact-info {
+            width: 90%;
+            max-width: 300px;
+            background-color: hsl(120, 50%, 40%);
+            color: white;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 4px;
+            color: hsl(240, 10%, 30%);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid hsl(240, 5.9%, 90%);
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: hsl(240, 5.9%, 10%);
+            color: white;
+            padding: 12px 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: hsl(240, 5.9%, 15%);
+        }
+
+        .contact-info p {
+            margin-bottom: 8px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: hsl(240, 10%, 85%);
+        }
+
+        
+    </style>
+</head>
+<body>
+	<nav class="navbar">
+	        <div class="logo">
+	            <h1 style="font-size: 20px;">Aapl Lonar ❤</h1>
+	        </div>
+	        <div class="menu">
+	            <a href="/" style="font-size: ">Home</a>
+				<a href="/gallery">Visit lonar</a>
+	            <a href="/galleryphotos">Gallery</a>
+	            <a href="https://www.instagram.com/aapl_lonar_mh28/" target="_blank">About</a>
+	            <a href="/contactMe">Contact</a>
+	        </div>
+	    </nav>
+    <div class="container">
+        <div class="form-section">
+            <h2>Send Message</h2>
+            <h2 style="color:green" th:text="${message}"></h2>
+            <form th:action="@{contactform}" th:object="${contactForm}" method="post">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input name="name" type="text" id="name" th:value="${contactForm.name}" placeholder="Enter Your Name" />
+                    <span style="color:red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input name="email" type="email" id="email" th:value="${contactForm.email}" placeholder="example@example.com" />
+                    <span style="color:red" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input name="phone" type="text" id="phone" th:value="${contactForm.phone}" placeholder="Enter your Phone Number" />
+                    <span style="color:red" th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}"></span>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" th:text="${contactForm.message}" rows="4" placeholder="Hi, do you have a moment to talk about..."></textarea>
+                    <span style="color:red" th:if="${#fields.hasErrors('message')}" th:errors="*{message}"></span>
+                </div>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            <p>Address: Ram Nagar, Lonar</p>
+            <p>Dis: Buldhana PinCode: 443302</p>
+            <p>Phone No: +91 7350678301</p>
+            <p>Email: radheshamdhadve@gmail.com</p>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
+        <div class="map">
+            <figure>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d75854.4800413125!2d76.508119!3d19.976676!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd0831f7893dac5%3A0xc44092ad4c581487!2sLonar%20Lake!5e1!3m2!1sen!2sin!4v1724495824732!5m2!1sen!2sin"
+                    width="900" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </figure>
+        </div>
+    </div>
+</body>
+</html>

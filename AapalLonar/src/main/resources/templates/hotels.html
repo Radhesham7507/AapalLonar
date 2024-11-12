@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            overflow: hidden;
+        }
+        .hotel {
+            display: flex;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            transition: transform 0.3s;
+            overflow: hidden;
+        }
+        .hotel:hover {
+            transform: translateY(-5px);
+        }
+        .hotel img {
+            width: 30%;
+            object-fit: cover;
+        }
+        .hotel-details {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .hotel-details h2 {
+            margin: 0 0 10px 0;
+        }
+        .book-btn {
+            padding: 10px 20px;
+            background: #28a745;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            align-self: flex-start;
+        }
+        .book-btn:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1> Book Hotel</h1>
+        <div class="hotel">
+            <img src="image/hotelV.jpg" alt="Hotel 1">
+            <div class="hotel-details">
+                <h2>Hotel Vikrant</h2>
+                <p>Starting from ₹1000 per night, this hotel offers basic amenities and is located near Lonar Lake.</p>
+                <a href="hotelbooking" class="book-btn">Book Hotel</a>
+            </div>
+        </div>
+        <div class="hotel">
+            <img src="image/hotelMTDC.webp" alt="Hotel 2">
+            <div class="hotel-details">
+                <h2>MTDC Resort Lonar</h2>
+                <p>This 3.5-star resort, located near Bhandardara Lake, offers comfortable rooms and amenities like a restaurant and outdoor pool. Prices start from around ₹1500 per night.</p>
+                <a href="hotelbooking" class="book-btn">Book Hotel</a>
+            </div>
+        </div>
+        <div class="hotel">
+            <img src="image/kirshnalodge.png" alt="Hotel 3">
+            <div class="hotel-details">
+                <h2>Krishna Lodge</h2>
+                <p>Mehkar Road, Opp. Central Bus Stand, Nai Nagri, Lonar, Dist. Buldhana, Maharashtra - 443302.
+					
+					Free Wi-Fi
+					
+					Free parking
+					
+					Pool
+					
+					Air-conditioned
+					
+					Laundry service
+					
+					Business centre
+					
+					Kitchens in some rooms
+					
+					 
+				</p>
+                <a href="hotelbooking" class="book-btn">Book Hotel</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

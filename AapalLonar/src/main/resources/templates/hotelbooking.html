@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Hotel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 50%;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 5px;
+        }
+        input, select {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .btn {
+            padding: 10px 20px;
+            background: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Book Hotel</h1>
+		<h2 style="color:green" th:text="${message}"></h2>
+        <form th:action="@{/hotelbookingForm}" method="POST" th:object="${hotelbookingform}">
+            
+            <label for="hotelchoice">Choice Hotel</label>
+            <select id="hotelchoice" name="hotelchoice" th:field="*{hotelchoice}" required>
+                <option value="Hotel Vikrant">Hotel Vikrant</option>
+                <option value="MTDC Resort Lonar">MTDC Resort Lonar</option>
+                <option value="Krishna Lodge">Krishna Lodge</option>
+            </select>
+            <span style="color:red" th:if="${#fields.hasErrors('hotelchoice')}" th:errors="*{hotelchoice}"></span>
+            
+            <label for="title">Title</label>
+            <select id="title" name="title" th:field="*{title}" required>
+                <option value="Mr">Mr</option>
+                <option value="Mrs">Mrs</option>
+                <option value="Ms">Ms</option>
+                <option value="Dr">Dr</option>
+            </select>
+            <span style="color:red" th:if="${#fields.hasErrors('title')}" th:errors="*{title}"></span>
+
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" th:field="*{name}" required>
+            <span style="color:red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span>
+
+            <label for="checkin">Check-in Date</label>
+            <input type="date" id="checkin" name="checkin" th:field="*{checkin}" required>
+            <span style="color:red" th:if="${#fields.hasErrors('checkin')}" th:errors="*{checkin}"></span>
+            
+            <label for="checkout">Check-out Date</label>
+            <input type="date" id="checkout" name="checkout" th:field="*{checkout}" required>
+            <span style="color:red" th:if="${#fields.hasErrors('checkout')}" th:errors="*{checkout}"></span>
+            
+            <label for="adults">Adults</label>
+            <input type="number" id="adults" name="adults" th:field="*{adults}" required>
+            <span style="color:red" th:if="${#fields.hasErrors('adults')}" th:errors="*{adults}"></span>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" th:field="*{email}" required>
+            <span style="color:red" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" th:field="*{phone}" required>
+            <span style="color:red" th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}"></span>
+
+            <button type="submit" class="btn">Book Now</button>
+        </form>
+    </div>
+</body>
+</html>

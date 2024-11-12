@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visit Lonar</title>
+    <style>
+		header {
+				  width: 100%;
+				  height: 110vh;
+				  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.15)),
+				    url("image/lonar.png");
+				  background-repeat: no-repeat;
+				  background-size: cover;
+				}
+		
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Grid Container */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* Card Styling */
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Image Styling */
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        /* Card Content */
+        .card-content {
+            padding: 15px;
+        }
+
+        .card-content h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .card-content p {
+            font-size: 14px;
+            color: #777;
+            margin-bottom: 15px;
+        }
+
+        /* Button Styling */
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <!-- Header Section -->
+    <div th:insert="~{fragments/header.html}"></div>
+    <!-- Header Section End -->
+
+    <!-- Gallery Grid -->
+    <div class="grid-container">
+        <!-- Card 1 -->
+        <div class="card">
+            <img src="image/lonar.png" alt="Gallery Image 1">
+            <div class="card-content">
+                <h3>Lonar Lake</h3>
+                <p>Lonar lake All information </p>
+                <a href="galleryinfo" class="btn">View Details</a>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+            <img src="image/sun.png" alt="Gallery Image 2">
+            <div class="card-content">
+                <h3>Daitya Sudan Temple, Lonar</h3>
+                <p>	Daitya Sudan Temple, Lonar all information</p>
+                <a href="daityinfo" class="btn">View Details</a>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+            <img src="image/temple.jpeg" alt="Gallery Image 3">
+            <div class="card-content">
+                <h3>Shiva Temple at Lonar</h3>
+                <p>All Information About Shiva Temple at Lonar</p>
+                <a href="shivatempleinfo" class="btn">View Details</a>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card">
+            <img src="image/Lonar_crater_lake_Temple.jpg" alt="Gallery Image 4">
+            <div class="card-content">
+                <h3>Kamalja Devi Temple</h3>
+                <p>All Information About amalja Devi Temple</p>
+                <a href="Kamaljadevitemple" class="btn">View Details</a>
+            </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="card">
+            <img src="image/dhar2.jpeg" alt="Gallery Image 5">
+            <div class="card-content">
+                <h3>Lonar Dhara Mandir,</h3>
+                <p>	Lonar Dhara Mandir, people bathing at Lonar Gaurmukh Temple</p>
+                <a href="gallerydharinfo" class="btn">View Details</a>
+            </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="card">
+            <img src="image/image7.jpg" alt="Gallery Image 6">
+            <div class="card-content">
+                <h3>Urban Exploration</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <a href="#" class="btn">View Details</a>
+            </div>
+        </div>
+    </div>
+	
+	<!-- Gallery Grid -->
+	    <div class="grid-container">
+	        <!-- Card 1 -->
+	        <div class="card">
+	            <img src="image/lonar.png" alt="Gallery Image 1">
+	            <div class="card-content">
+	                <h3>Lonar Lake</h3>
+	                <p>Lonar lake All information </p>
+	                <a href="galleryinfo" class="btn">View Details</a>
+	            </div>
+	        </div>
+
+	        <!-- Card 2 -->
+	        <div class="card">
+	            <img src="image/sun.png" alt="Gallery Image 2">
+	            <div class="card-content">
+	                <h3>Daitya Sudan Temple, Lonar</h3>
+	                <p>	Daitya Sudan Temple, Lonar all information</p>
+	                <a href="daityinfo" class="btn">View Details</a>
+	            </div>
+	        </div>
+
+	        <!-- Card 3 -->
+	        <div class="card">
+	            <img src="image/temple.jpeg" alt="Gallery Image 3">
+	            <div class="card-content">
+	                <h3>Shiva Temple at Lonar</h3>
+	                <p>All Information About Shiva Temple at Lonar</p>
+	                <a href="shivatempleinfo" class="btn">View Details</a>
+	            </div>
+	        </div>
+
+	        <!-- Card 4 -->
+	        <div class="card">
+	            <img src="image/lonarlake1.jpg" alt="Gallery Image 4">
+	            <div class="card-content">
+	                <h3>Kamalja Devi Temple</h3>
+	                <p>All Information About amalja Devi Temple</p>
+	                <a href="Kamaljadevitemple" class="btn">View Details</a>
+	            </div>
+	        </div>
+
+	        <!-- Card 5 -->
+	        <div class="card">
+	            <img src="image/dhar2.jpeg" alt="Gallery Image 5">
+	            <div class="card-content">
+	                <h3>Lonar Dhara Mandir,</h3>
+	                <p>	Lonar Dhara Mandir, people bathing at Lonar Gaurmukh Temple</p>
+	                <a href="gallerydharinfo" class="btn">View Details</a>
+	            </div>
+	        </div>
+
+	        <!-- Card 6 -->
+	        <div class="card">
+	            <img src="image/image7.jpg" alt="Gallery Image 6">
+	            <div class="card-content">
+	                <h3>Urban Exploration</h3>
+	                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+	                <a href="#" class="btn">View Details</a>
+	            </div>
+	        </div>
+	    </div>
+</header>
+</body>
+</html>
