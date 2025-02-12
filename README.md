@@ -11,7 +11,7 @@ AapalLonar is a project built with **Spring Boot** for the backend. This guide p
 - [Database Configuration](#database-configuration)
 - [Deploying on AWS](#deploying-on-aws)
 - [Contributing](#contributing)
-- [License](#license)
+
 
 ---
 
