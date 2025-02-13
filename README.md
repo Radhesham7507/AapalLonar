@@ -95,7 +95,7 @@ If using a cloud-based MongoDB service, replace localhost:27017 with the appropr
 
 If using a cloud-based MongoDB service, replace `localhost:27017` with the appropriate connection string.
 
----OR if You Are Using Mysql ---
+**---OR if You Are Using Mysql ---**
 
 ## Database Configuration With MySql
 Modify `application.properties` or `application.yml` with the correct database details:
