@@ -170,9 +170,6 @@ Feel free to contribute by creating issues or submitting pull requests.
 
 ---
 
-## License
-
-This project is licensed under the MIT License.
 
 
 
