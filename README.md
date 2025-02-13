@@ -1,4 +1,13 @@
 # AapalLonar
+### Architecture Diagrams
+
+**This is Sequence Diagram For Backend**
+<br>
+![logo](https://github.com/Radhesham7507/AapalLonar/blob/master/AapalLonar_BackendSUD.png)
+
+**This is Sequence Diagram For Frantend**
+<br>
+![logo](https://github.com/Radhesham7507/AapalLonar/blob/master/ApalLonar_FrantendSUD.png)
 
 AapalLonar is a project built with **Spring Boot** for the backend. This guide provides step-by-step instructions on setting up the project, running it locally, and deploying it on **AWS**.
 
