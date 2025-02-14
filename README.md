@@ -1,4 +1,6 @@
 # AapalLonar
+<img src="https://github.com/Radhesham7507/AapalLonar/blob/master/lonar.png">
+
 ### Architecture Diagrams
 
 **This is Sequence Diagram For Backend**
