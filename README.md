@@ -1,5 +1,6 @@
 # AapalLonar
-Visit a Website>> http://3.94.128.144/
+Visit a Website>><a href="http://3.94.128.144/" target="_blank">AaplLonar</a>
+
 <img src="https://github.com/Radhesham7507/AapalLonar/blob/master/lonar.png">
 
 ### Architecture Diagrams
