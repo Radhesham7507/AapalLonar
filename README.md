@@ -1,5 +1,6 @@
 # AapalLonar
-Visit a Website>><a href="http://3.94.128.144/" target="_blank">AaplLonar</a>
+Visit a Website>><a href="http://3.94.128.144/" target="_blank" rel="noopener noreferrer">AaplLonar</a>
+
 
 <img src="https://github.com/Radhesham7507/AapalLonar/blob/master/lonar.png">
 
